@@ -8,3 +8,6 @@ for (let item of cartItems){
     const tableRow = renderCartItem(item);
     anchor.append(tableRow);
 }
+
+const totalPrice = getCartTotal(cartItems);
+ total.textContent = totalPrice; 
