@@ -19,6 +19,7 @@ export function renderPotions(handmadePotions){
     p.textContent = `It will cost ya ${handmadePotions.price} gold pieces!`;
     
     const button = document.createElement('button');
+    button.classList.add('cartButton')
     button.textContent = 'Add to witch cart!';
     button.value = handmadePotions.id;
     p.appendChild(button);

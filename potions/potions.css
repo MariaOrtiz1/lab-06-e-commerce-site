@@ -14,6 +14,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("https://image.freepik.com/free-vector/wooden-shelves-background_108964-346.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #potion-list{
@@ -29,4 +32,8 @@
 .potionImages{
   height: 400px;
   width: 400px;
+}
+
+.cartButton{
+  display: block;
 }
