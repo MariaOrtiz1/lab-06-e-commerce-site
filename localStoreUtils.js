@@ -1,11 +1,8 @@
 import { getById } from '../Cart/render-cart.js';
 
-// set magic strings as constants 
-const CART = 'CART';
-
 export function getCart() {
     // get the stringy cart from local storage 
-    const stringCart = localStorage.getItem(CART);
+    const stringCart = localStorage.getItem('CART');
 
     // turns the string into actual cart owo 
     const parsedCart = JSON.parse(stringCart);
@@ -24,7 +21,7 @@ export function getCart() {
 export function setCart(whateverCart) {
     const stringCart = JSON.stringify(whateverCart);
 
-    localStorage.setItem(CART, stringCart);
+    localStorage.setItem('CART', stringCart);
 }
 
 export function addProductToCart(productId) {

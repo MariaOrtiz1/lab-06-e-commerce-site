@@ -1,3 +1,5 @@
+import { addProductToCart } from '../localStoreUtils.js';
+
 
 export function renderPotions(handmadePotions){
     const li = document.createElement('li');
@@ -22,6 +24,14 @@ export function renderPotions(handmadePotions){
     button.classList.add('cartButton')
     button.textContent = 'Add to witch cart!';
     button.value = handmadePotions.id;
+
+    button.addEventListener('click', () => {
+        addProductToCart(handmadePotions.id);
+
+        console.log(handmadePotions.quantity);
+        console.log(handmadePotions.id);
+    });
+
     p.appendChild(button);
     
     li.appendChild(p);

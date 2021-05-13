@@ -1,6 +1,6 @@
 // dumby test
 
-export const cartItems = [
+// export const cartItems = [
     {
         id: 2,
         quantity: 2,
