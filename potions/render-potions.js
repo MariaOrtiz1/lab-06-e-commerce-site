@@ -1,6 +1,5 @@
 import { addProductToCart } from '../localStoreUtils.js';
 
-
 export function renderPotions(handmadePotions){
     const li = document.createElement('li');
     li.classList.add(handmadePotions.category);
