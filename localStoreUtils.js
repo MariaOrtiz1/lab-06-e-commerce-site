@@ -26,3 +26,28 @@ export function setCart(whateverCart) {
 
     localStorage.setItem(CART, stringCart);
 }
+
+export function addProductToCart(productId) {
+
+    // This gets the cart and checks to see if there is any empty one or a loaded one already!
+    const cart = getCart();
+
+
+    // Looks over the cart and sees if it is missing the item that was just added, or if the item is already there to just add an extra quantity.
+    const cartItem = getById(cart, productId);
+
+    if (cartItem) {
+        cartItem.quantity++;
+    } else {
+        const newItem = {
+            id: productId,
+            quantity: 1,
+        };
+
+        // tis pushes the new item in to the array! Just adding our groceries into the cart! :D
+        cart.push(newItem);
+    }
+
+    // this just makes the console remember that we have our new updated list!
+    setCart(cart);
+}
