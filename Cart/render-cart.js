@@ -1,5 +1,4 @@
 import handmadePotions from '../data/potions.js';
-import { getCart } from '../localStoreUtils.js';
 
 export function getById(someArray, ID){
     for (let item of someArray){
@@ -9,8 +8,6 @@ export function getById(someArray, ID){
     }
     return null;
 }
-
-const cartItems = getCart();
 
 export function getCartTotal(arr) {
     let accumulator = 0;

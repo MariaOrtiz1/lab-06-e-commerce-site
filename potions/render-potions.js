@@ -21,15 +21,13 @@ export function renderPotions(handmadePotions){
     p.textContent = `It will cost ya ${handmadePotions.price} gold pieces!`;
     
     const button = document.createElement('button');
-    button.classList.add('cartButton')
+    button.classList.add('cartButton');
     button.textContent = 'Add to witch cart!';
     button.value = handmadePotions.id;
 
     button.addEventListener('click', () => {
         addProductToCart(handmadePotions.id);
-
-        console.log(handmadePotions.quantity);
-        console.log(handmadePotions.id);
+        alert(`${handmadePotions.name}! What an excellent choice! ${handmadePotions.name} will be added to your cart!`);
     });
 
     p.appendChild(button);
