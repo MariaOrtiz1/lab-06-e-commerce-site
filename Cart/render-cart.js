@@ -32,8 +32,8 @@ export function renderCartItem(placeholder) {
     const totalTd = document.createElement('td');
     nameTd.textContent = cartPotion.name;
     quantityTd.textContent = placeholder.quantity;
-    priceTd.textContent = `${handmadePotions.price} gold pieces`;
-    const total = handmadePotions.price * placeholder.quantity;
+    priceTd.textContent = `${cartPotion.price} gold pieces`;
+    const total = cartPotion.price * placeholder.quantity;
     totalTd.textContent = `${total} gold pieces`;
     tr.append(nameTd, quantityTd, priceTd, totalTd);
     return tr;
