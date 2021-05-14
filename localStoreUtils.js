@@ -1,4 +1,4 @@
-import { getById } from '../Cart/render-cart.js';
+import { getById } from './Cart/render-cart.js';
 
 export function getCart() {
     // get the stringy cart from local storage 
