@@ -1,4 +1,4 @@
-import handmadePotions from '../data/potions.js';
+import { handmadePotions } from '../data/potions.js';
 import { renderPotions } from './render-potions.js';
 
 const displayItemList = document.getElementById('potion-list');

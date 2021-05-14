@@ -43,7 +43,6 @@ const nectarOfPurification = {
     price: 3,
 };
 
+export const handmadePotions = [minorElixirOfLife, lesserAntiPlague, lesserDrakeheartMutagen, silversheen, nectarOfPurification];
 
-const handmadePotions = [minorElixirOfLife, lesserAntiPlague, lesserDrakeheartMutagen, silversheen, nectarOfPurification];
-
-export default handmadePotions;
+//  default handmadePotions;

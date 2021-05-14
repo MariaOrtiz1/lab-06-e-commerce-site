@@ -1,4 +1,4 @@
-import handmadePotions from '../data/potions.js';
+import { handmadePotions } from '../data/potions.js';
 
 export function getById(someArray, ID){
     for (let item of someArray){
@@ -23,9 +23,9 @@ export function getCartTotal(arr) {
     return accumulator;
 }
 
-export function renderCartItem(getCart) {
+export function renderCartItem(cartItem) {
 
-    const cartPotion = getById(handmadePotions, getCart.id);
+    const cartPotion = getById(handmadePotions, cartItem.id);
 
     const tr = document.createElement('tr');
 
@@ -39,11 +39,11 @@ export function renderCartItem(getCart) {
 
     nameTd.textContent = cartPotion.name;
 
-    quantityTd.textContent = getCart.quantity;
+    quantityTd.textContent = cartItem.quantity;
 
     priceTd.textContent = `${cartPotion.price} gold pieces`;
 
-    const total = cartPotion.price * getCart.quantity;
+    const total = cartPotion.price * cartItem.quantity;
 
     totalTd.textContent = `${total} gold pieces`;
 
